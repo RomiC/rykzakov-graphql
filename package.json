@@ -1,0 +1,29 @@
+{
+  "name": "rykzakov-graphql",
+  "version": "1.0.0",
+  "description": "simplacms, graphql",
+  "main": "index.js",
+  "author": "Roman Charugin <i@charugin.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.11.7",
+    "mysql2": "^1.5.1",
+    "sequelize": "^4.27.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.5",
+    "npm-run-all": "^4.1.2",
+    "rollup": "^0.52.1",
+    "rollup-plugin-commonjs": "^8.2.6"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "watch:build": "npm run build -- --watch",
+    "watch:server": "nodemon",
+    "dev": "npm-run-all --print-label watch:*",
+    "postinstall": "npm run build",
+    "start": "node ./build/server.js"
+  }
+}

@@ -1,0 +1,1 @@
+export const DB_STRING = 'mysql://rykzakov:rykzakov@localhost:3306/rykzakov';
